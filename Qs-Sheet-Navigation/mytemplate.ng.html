@@ -1,47 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<style type="text/css">
 
-  
+.btn:hover{
+background-color:#e8e9ea !important;
+}
 
-  <style type="text/css">
 
+.dropbtn{
+display:inline-block;
+padding-top:0px;
+padding-bottom:0px;
+}
+.dropbtn:hover{
+background-color:#e8e9ea !important;
+}
+
+
+#myS{
+
+height:556px;
+transition:0.5s;
+top:79px;
+overflow:auto !important;
+bottom:70px;
+
+}
+
+
+
+#myDropdown ul li a div.selected {
+      background-color:#309 !important;
+   
+    text-decoration-line: none !important;
+    width: 100%;
+    border-left: 2px solid #e62d49;
+}
+#clbtn{
+border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #ffffff;
+    width: 194px;
+    height: 31px;
+    color: #777777;
+    position: relative;
+    left: 20px;
+    top: -21px;
+	
+}
+#clbtn:hover{
+    box-shadow: 0px 5px 18px #e8e9ea;
+
+
+}
+
+.btn{
+border-radius:5px;
+}
+
+
+#grid-wrap{
+transition:0.5s;
+margin-left:0px;
+}
+
+#sheet-title{
+transition:0.5s;
+margin-left:0px;
+}
 </style>
+
+
+<script type="text/javascript">
+   
+ function opFilter() {
+ document.getElementById("myS").style.background= "#4D4D4D";
+    document.getElementById("myS").style.width = "250px";
+	document.getElementById("myS").style.transition= "0.5s";
+	
+	 document.getElementById("grid-wrap").setAttribute(
+   "style", "margin-left:250px !important;transition:0.5s;");
+	 document.getElementById("sheet-title").setAttribute(
+   "style", "margin-left:250px !important;transition:0.5s;");
+}
+
+function clFilter(){
+    document.getElementById("myS").style.width = "0px";
+	document.getElementById("myS").style.background= "#4D4D4D";
+		document.getElementById("myS").style.transition= "0s";
+	
+	
+	 document.getElementById("grid-wrap").setAttribute(
+   "style", "margin-left:0px !important;transition:0s;");
+	 document.getElementById("sheet-title").setAttribute(
+   "style", "margin-left:16px !important;transition:0s;");
+}
+
+clFilter();
+
+</script>
+
 </head>
 <body >
 
 
 <div qv-extension  style="text-align: {{layout.props.buttonAlign}}" ng-class="(layout.buttonWidth === 'default') ? 'container default' : 'container full-width'">
 
- <div id="myS" class="siden" style="width: {{layout.prop.navwidth}}px;background-color:{{layout.props.buttonStylea}};">
+ <div id="myS" class="siden" style="background-color:{{layout.sheetbackColor}} !important;">
+   
+<button onclick ="clFilter()"  id="clbtn" style="">
+Close Drawer</button>
 
-  <a href="javascript:void(0)" class="closebtn" onclick="clFilter()" style="text-decoration: none;">×</a>
+  <!--<a href="javascript:void(0)" class="closebtn" onclick="clFilter()" style="text-decoration: none;">×</a>-->
  
  <div class="dropdown">
 
-  <div id="myDropdown" class="dropdown-content">
+  <div id="myDropdown" class="">
+  
 
 
-        <div class="btn" 
-         
-         style="visibility:{{layout.prop.visiblea}};margin-bottom:9px;margin-top:9px;background-color: {{layout.props.buttonStyle}} !important;color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go();">
+<div class="btn" style="visibility:{{layout.prop.visiblea}};margin-bottom:9px;margin-top:9px;background-color: {{layout.props.buttonStyle}} !important;color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go();">
 <i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel1}}
 </div>
-        
+      
       
         
 
-
-<div class="btn" style="visibility:{{layout.prop.visibleb}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go1();">
+<div class="btn"  style="visibility:{{layout.prop.visibleb}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go1();">
 <i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel2}}
 </div>
+
     
-        <div class="btn" style="visibility:{{layout.prop.visiblec}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go2();">
+ <div class="btn" style="visibility:{{layout.prop.visiblec}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go2();">
 <i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel3}}
 </div>
 
 
-  <div class="btn" style="visibility:{{layout.prop.visibled}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go3();">
+
+  <div class="btn"  style="visibility:{{layout.prop.visibled}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go3();">
 <i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel4}}
 </div>
 
@@ -59,7 +157,7 @@
 <i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel7}}
 </div>
 
-<div class="btn" style="visibility:{{layout.prop.visibleh}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go7();">
+<div class="btn"  style="visibility:{{layout.prop.visibleh}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go7();">
 <i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel8}}
 </div>
 
@@ -71,6 +169,29 @@
 <i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel10}}
 </div>
 
+<div class="btn"  style="visibility:{{layout.prop.visiblek}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go10();">
+<i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel11}}
+</div>
+
+<div class="btn"  style="visibility:{{layout.prop.visiblel}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go11();" qva-activate="clFilter();">
+<i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel12}}
+</div>
+
+<div class="btn"  style="visibility:{{layout.prop.visiblem}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go12();" qva-activate="clFilter();">
+<i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel13}}
+</div>
+
+
+<div class="btn"style="visibility:{{layout.prop.visiblen}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go13();" qva-activate="clFilter();">
+<i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel15}}
+</div>
+
+<div class="btn" style="visibility:{{layout.prop.visiblety}};margin-bottom:9px;background-color: {{layout.props.buttonStyle}};color: {{layout.propscolor}};width:{{layout.proswidth}}px;height: {{layout.prosheight}}px;font-size: {{layout.fontS}}px;" ng-class="[(layout.props.buttonStyle) ? 'btn-' + layout.props.buttonStyle : 'btn-default', (layout.props.fullWidth) ? 'full-width' : 'auto-width', (layout.props.isButtonMultiLine) ? 'btn-multiline' : '']" qva-activate="go14();" qva-activate="clFilter();">
+<i ng-if="layout.props.buttonIcon !== ''" class="fa fa-{{layout.props.buttonIcon}}" style="padding-right:5px"></i>{{layout.props.buttonLabel16}}
+</div>
+
+
+
 
 
  
@@ -81,12 +202,12 @@
 
 
 <script >
-$(document).ready(function () {
-    $('#myDropdown .btn').click(function (ev) {
-        $('#myDropdown i').removeClass('selected');
-        $(ev.currentTarget).parent('i').addClass('selected');
+/*$(document).ready(function () {
+    $('#myDropdown ul li a div').click(function (ev) {
+        $('myDropdown ul li a').removeClass('selected');
+        $(ev.currentTarget).parent('div').addClass('selected');
     });
-});
+});*/
 
 
 </script>
@@ -132,20 +253,15 @@ window.onclick = function(event) {
 </div>
 
 
-<button onclick ="opFilter()" class="dropbtn" style="background-color:{{layout.prop.colorj}};width: {{layout.btn_width}}px;height:{{layout.btn_height}}px;">Select Sheet</button>
+<button onclick="opFilter()" class="dropbtn" id="tgle" style="border:1px solid #cccccc;border-radius:{{layout.btnborder}}px;background-color:{{layout.props.btnstyle}};width: {{layout.btn_width}}px;height:{{layout.btn_height}}px;color:{{layout.prop.colorj}}">
+{{layout.props.buttonLabel14}}</button>
 
 
 
-<script type="text/javascript">
-   
-  function opFilter() {
-    document.getElementById("myS").style.width = "250px";
-}
 
-function clFilter(){
-    document.getElementById("myS").style.width = "0";
-}
-</script>
+
+
+
 
 </div>
 

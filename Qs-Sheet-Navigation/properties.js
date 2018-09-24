@@ -88,6 +88,16 @@ define([
     defaultValue: "#cccccc "
 
   };
+  
+    var btnstyle = {
+     type: "string",
+   // component: "dropdown",
+    ref: "props.btnstyle",
+    label: "Backgrounnd-color",
+    expression:"optional",
+    defaultValue: "#ffffff"
+
+  };
 
   var color = {
      type: "string",
@@ -105,7 +115,7 @@ define([
     ref: "proswidth",
     label: "width",
     expression:"optional",
-    defaultValue: "150"
+    defaultValue: "159"
 
   };
 
@@ -115,7 +125,7 @@ define([
     ref: "prosheight",
     label: "height",
     expression:"optional",
-    defaultValue: "20"
+    defaultValue: "16"
 
   };
 
@@ -125,7 +135,7 @@ define([
     ref: "btn_width",
     label: "sheet button width",
     expression:"optional",
-    defaultValue: "150"
+    defaultValue: "106"
 
   };
 
@@ -135,9 +145,21 @@ define([
     ref: "btn_height",
     label: "sheet button height",
     expression:"optional",
-    defaultValue: "20"
+    defaultValue: "23"
 
   };
+  
+   var btnborder= {
+     type: "string",
+   // component: "dropdown",
+    ref: "btnborder",
+    label: "Border Radius",
+    expression:"optional",
+    defaultValue: "5"
+
+  };
+  
+  
 
 
     var fsize = {
@@ -376,6 +398,101 @@ define([
       return data.props.action === 'gotoSheet';
     }
   };
+  
+     var sheetList10 = {
+    type: "string",
+    component: "dropdown",
+    label: "Select button11 Sheet",
+    ref: "props.selectedSheet10",
+    options: function () {
+      return getSheetList().then(function (items) {
+        return items;
+      });
+    },
+    show: function (data) {
+      return data.props.action === 'gotoSheet';
+    }
+  };
+  
+  
+  var sheetList11 = {
+    type: "string",
+    component: "dropdown",
+    label: "Select button12 Sheet",
+    ref: "props.selectedSheet11",
+    options: function () {
+      return getSheetList().then(function (items) {
+        return items;
+      });
+    },
+    show: function (data) {
+      return data.props.action === 'gotoSheet';
+    }
+  };
+  
+  var sheetList12 = {
+    type: "string",
+    component: "dropdown",
+    label: "Select button13 Sheet",
+    ref: "props.selectedSheet12",
+    options: function () {
+      return getSheetList().then(function (items) {
+        return items;
+      });
+    },
+    show: function (data) {
+      return data.props.action === 'gotoSheet';
+    }
+  };
+  
+  
+  
+  
+  var sheetList13 = {
+    type: "string",
+    component: "dropdown",
+    label: "Select button14 Sheet",
+    ref: "props.selectedSheet13",
+    options: function () {
+      return getSheetList().then(function (items) {
+        return items;
+      });
+    },
+    show: function (data) {
+      return data.props.action === 'gotoSheet';
+    }
+  };
+  
+  
+  
+  var sheetList14 = {
+    type: "string",
+    component: "dropdown",
+    label: "Select button15 Sheet",
+    ref: "props.selectedSheet14",
+    options: function () {
+      return getSheetList().then(function (items) {
+        return items;
+      });
+    },
+    show: function (data) {
+      return data.props.action === 'gotoSheet';
+    }
+  };
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
@@ -483,7 +600,8 @@ define([
     },
     defaultValue: "My Button"
   };
-
+  
+ 
  var buttonLabel10= {
     ref: "props.buttonLabel10",
     label: "Label10",
@@ -493,6 +611,103 @@ define([
       return true;
     },
     defaultValue: "My Button"
+  };
+  
+   
+ var buttonLabel11= {
+    ref: "props.buttonLabel11",
+    label: "Label11",
+    type: "string",
+    expression: "optional",
+    show: function () {
+      return true;
+    },
+    defaultValue: "My Button"
+  };
+  
+  
+  
+  var buttonLabel12= {
+    ref: "props.buttonLabel12",
+    label: "Label12",
+    type: "string",
+    expression: "optional",
+    show: function () {
+      return true;
+    },
+    defaultValue: "My Button"
+  };
+  
+  var buttonLabel13= {
+    ref: "props.buttonLabel13",
+    label: "Label13",
+    type: "string",
+    expression: "optional",
+    show: function () {
+      return true;
+    },
+    defaultValue: "My Button"
+  };
+  
+   var buttonLabel15= {
+    ref: "props.buttonLabel15",
+    label: "Label 14",
+    type: "string",
+    expression: "optional",
+    show: function () {
+      return true;
+    },
+    defaultValue: "My Button"
+  };
+  
+  
+   var buttonLabel16= {
+    ref: "props.buttonLabel16",
+    label: "Label 15",
+    type: "string",
+    expression: "optional",
+    show: function () {
+      return true;
+    },
+    defaultValue: "My Button"
+  };
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  var buttonLabel14= {
+    ref: "props.buttonLabel14",
+    label: "Label on button",
+    type: "string",
+    expression: "optional",
+    show: function () {
+      return true;
+    },
+    defaultValue: "Select Sheet"
   };
 
   var navigation_color = {
@@ -610,28 +825,75 @@ define([
     defaultValue: "visible"
 
   };
+  
+   var visible11= {
+     type: "string",
+    ref: "prop.visiblek",
+    label: "visibility button11",
+    
+    defaultValue: "visible"
 
-var navsheet_width={
+  };
+  
+  
+   var visible12= {
+     type: "string",
+    ref: "prop.visiblel",
+    label: "visibility button12",
+    
+    defaultValue: "visible"
 
-    type: "string",
+  };
+  
+  
+   var visible13= {
+     type: "string",
+    ref: "prop.visiblem",
+    label: "visibility button13",
+    
+    defaultValue: "visible"
+
+  };
+  
+   var visible14= {
+     type: "string",
+    ref: "prop.visiblen",
+    label: "visibility button14",
+    
+    defaultValue: "visible"
+
+  };
+  
+  
+   var visible15= {
+     type: "string",
+    ref: "prop.visiblety",
+    label: "visibility button15",
+    
+    defaultValue: "visible"
+
+  };
+  
+  
+  
+  
+  
+  
+    var sheetbackColor = {
+     type: "string",
    // component: "dropdown",
-    ref: "prop.navwidth",
-    label: "width",
+    ref: "sheetbackColor",
+    label: "sheetbackColor",
     expression:"optional",
-    defaultValue: "250"
+    defaultValue: "#309"
 
-}
+  };
+  
+  
+  
+  
+  
 
-var navsheet_color={
-
-  type: "string",
-   // component: "dropdown",
-    ref: "props.buttonStylea",
-    label: "Backgrounnd-color",
-    expression:"optional",
-    defaultValue: "#cccccc "
-
-};
 
 
 
@@ -690,15 +952,30 @@ var navsheet_color={
           }
         }
       },
+	  
+	  
+	  SheetBtnLayout: {
+        type: "items",
+        label: "Drawer button style",
+        items: {
+          
+     		btnstyle: btnstyle,
+          btn_width:btn_width,
+          btn_height:btn_height,
+		  btnborder:btnborder,
+          navigation_color: navigation_color,
+		   buttonLabel14:buttonLabel14,
+		   sheetbackColor:sheetbackColor,
+
+        }
+      },
       layout: {
         type: "items",
-        label: "Layout",
+        label: " Inner Sheet Button Layout",
         items: {
           
           style: style,
-          btn_width:btn_width,
-          btn_height:btn_height,
-          navigation_color: navigation_color,
+        
 
           color:color,
           
@@ -729,6 +1006,14 @@ var navsheet_color={
             visible8:visible8,
            visible9:visible9,
              visible10:visible10,
+			   visible11:visible11,
+			   visible12:visible12,
+			   visible13:visible13,
+			   
+			   visible14:visible14,
+			   visible15:visible15,
+			 
+		
            
         }
       },
@@ -749,7 +1034,15 @@ var navsheet_color={
           sheetList6: sheetList6,
           sheetList7: sheetList7,
           sheetList8: sheetList8,
-          sheetList9: sheetList9
+          sheetList9: sheetList9,
+		  sheetList10: sheetList10,
+		  sheetList11: sheetList11,
+		  sheetList12:sheetList12,
+		  
+		   sheetList13: sheetList13,
+		  sheetList14:sheetList14,
+		  
+
         
          
         }
@@ -773,24 +1066,24 @@ var navsheet_color={
             buttonLabel8:buttonLabel8,
             buttonLabel9:buttonLabel9,
             buttonLabel10:buttonLabel10,
+			 buttonLabel11:buttonLabel11,
+			 
+			  buttonLabel12:buttonLabel12,
+			   buttonLabel13:buttonLabel13,
+			   
+			    
+			   buttonLabel15:buttonLabel15,
+			   buttonLabel16:buttonLabel16,
+			
+		
+         
             
 
          }
 },
 
 
-       Navsheet: {
-
-         type: "items",
-        label: "Navsheet Style",
-         items: {
-
-        navsheet_width: navsheet_width,
-       navsheet_color: navsheet_color
-            
-
-         }
-},
+     
 
 
 

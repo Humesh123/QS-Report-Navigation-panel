@@ -18,15 +18,15 @@ define([
     './lib/external/sense-extension-utils/extUtils',
     './properties',
     './initialproperties',
-    'text!./lib/css/main.css',
+  'text!./lib/css/main.css',
     'text!./mytemplate.ng.html'
   ],
   function ($, _, qlik, angular, Deferred, extUtils, props, initProps, cssContent, ngTemplate) {
     'use strict';
 
-    extUtils.addStyleToHeader(cssContent);
-    var faUrl = extUtils.getBasePath() + '/extensions/sheet_Navigation/lib/external/fontawesome/css/font-awesome.min.css';
-    extUtils.addStyleLinkToHeader(faUrl, 'sheet_Navigation__fontawesome');
+ extUtils.addStyleToHeader(cssContent);
+    var faUrl = extUtils.getBasePath() + '/extensions/Qs-Sheet-Navigation/lib/external/fontawesome/css/font-awesome.min.css';
+    extUtils.addStyleLinkToHeader(faUrl, 'Qs-Sheet-Navigation__fontawesome');
 
     // Helper function to split numbers.
     function splitToStringNum(str, sep) {
@@ -220,32 +220,85 @@ define([
                 break;
             }
           };
+		  
+		    $scope.doNavigate10 = function () {
 
+            switch ($scope.layout.props.action) {
+            
+              case "gotoSheet":
+     
+                  $scope.gotoSheet($scope.layout.props.selectedSheet10);
+                break;
+             
+              default:
+                break;
+            }
+          };
+		  
+		  
+		    $scope.doNavigate11 = function () {
 
+            switch ($scope.layout.props.action) {
+            
+              case "gotoSheet":
+     
+                  $scope.gotoSheet($scope.layout.props.selectedSheet11);
+                break;
+             
+              default:
+                break;
+            }
+          };
+		  
+		  $scope.doNavigate12 = function () {
 
+            switch ($scope.layout.props.action) {
+            
+              case "gotoSheet":
+     
+                  $scope.gotoSheet($scope.layout.props.selectedSheet12);
+                break;
+             
+              default:
+                break;
+            }
+          };
+		  
+		   $scope.doNavigate13 = function () {
 
+            switch ($scope.layout.props.action) {
+            
+              case "gotoSheet":
+     
+                  $scope.gotoSheet($scope.layout.props.selectedSheet13);
+                break;
+             
+              default:
+                break;
+            }
+          };
+		  
+		  
+		   $scope.doNavigate14 = function () {
 
+            switch ($scope.layout.props.action) {
+            
+              case "gotoSheet":
+     
+                  $scope.gotoSheet($scope.layout.props.selectedSheet14);
+                break;
+             
+              default:
+                break;
+            }
+          };
+		  
+		  
+		
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		  
+		  
+		  
           $scope.isEditMode = function () {
             return $scope.$parent.$parent.editmode;
           };
@@ -412,6 +465,45 @@ define([
               $scope.doNavigate9();
             }
           };
+		  
+		   $scope.go10= function () {
+            if (!$scope.isEditMode()) {
+              $scope.doAction();
+              $scope.doNavigate10();
+            }
+          };
+		  
+		  $scope.go11= function () {
+            if (!$scope.isEditMode()) {
+              $scope.doAction();
+              $scope.doNavigate11();
+            }
+          };
+		  
+		  $scope.go12= function () {
+            if (!$scope.isEditMode()) {
+              $scope.doAction();
+              $scope.doNavigate12();
+            }
+          };
+		  
+		  $scope.go13= function () {
+            if (!$scope.isEditMode()) {
+              $scope.doAction();
+              $scope.doNavigate13();
+            }
+          };
+		  
+		  $scope.go14= function () {
+            if (!$scope.isEditMode()) {
+              $scope.doAction();
+              $scope.doNavigate14();
+            }
+          };
+		  
+		  
+		  
+		  
 
 
           $scope.gotoSheet = function (sheetId) {
