@@ -48,7 +48,7 @@ define([
   var getIcons = function () {
     var defer = $q.defer();
 
-    $http.get(extUtils.getExtensionPath('PX_Navigation') + '/lib/data/icons-fa.json')
+    $http.get(extUtils.getExtensionPath('Qs-Sheet-Navigation') + '/lib/data/icons-fa.json')
       .then(function (res) {
 
         var sortedIcons = _.sortBy(res.data.icons, function (o) {
@@ -728,7 +728,15 @@ define([
      type: "string",
     ref: "prop.visiblea",
     label: "visibility button1(* visible or hidden)",
-    defaultValue: "visible"
+   component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
 
@@ -738,7 +746,15 @@ define([
     ref: "prop.visibleb",
     label: "visibility button2",
   
-    defaultValue: "visible"
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
 
@@ -748,7 +764,15 @@ define([
     ref: "prop.visiblec",
     label: "visibility button3",
   
-    defaultValue: "visible"
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
 
@@ -758,7 +782,15 @@ define([
     ref: "prop.visibled",
     label: "visibility button4",
    
-    defaultValue: "visible"
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
 
@@ -768,7 +800,15 @@ define([
     ref: "prop.visiblee",
     label: "visibility button5",
    
-    defaultValue: "visible"
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
 
@@ -777,7 +817,15 @@ define([
     ref: "prop.visiblef",
     label: "visibility button6",
 
-    defaultValue: "visible"
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
 
@@ -787,7 +835,15 @@ define([
     ref: "prop.visibleg",
     label: "visibility button7",
    
-    defaultValue: "visible"
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
 
@@ -799,7 +855,15 @@ define([
     ref: "prop.visibleh",
     label: "visibility button8",
    
-    defaultValue: "visible"
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
 
@@ -811,7 +875,15 @@ define([
     ref: "prop.visiblei",
     label: "visibility button9",
    
-    defaultValue: "visible"
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
 
@@ -822,7 +894,15 @@ define([
     ref: "prop.visiblej",
     label: "visibility button10",
     
-    defaultValue: "visible"
+   component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
   
@@ -831,7 +911,15 @@ define([
     ref: "prop.visiblek",
     label: "visibility button11",
     
-    defaultValue: "visible"
+ component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
   
@@ -841,7 +929,15 @@ define([
     ref: "prop.visiblel",
     label: "visibility button12",
     
-    defaultValue: "visible"
+   component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
   
@@ -851,7 +947,15 @@ define([
     ref: "prop.visiblem",
     label: "visibility button13",
     
-    defaultValue: "visible"
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
   
@@ -860,7 +964,15 @@ define([
     ref: "prop.visiblen",
     label: "visibility button14",
     
-    defaultValue: "visible"
+   component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
   
@@ -869,8 +981,32 @@ define([
      type: "string",
     ref: "prop.visiblety",
     label: "visibility button15",
+    component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
+
+  };
+  
+    var visible16= {
+     type: "string",
+    ref: "prop.visibletz",
+    label: "visibility button1",
     
-    defaultValue: "visible"
+	component : 'buttongroup',
+	options: [ {
+			value: 'visible',
+			label: 'visible'
+			}, {
+			value: 'hidden',
+			label: 'hidden'
+			}],
+			defaultValue: 'visible'
 
   };
   
@@ -966,6 +1102,7 @@ define([
           navigation_color: navigation_color,
 		   buttonLabel14:buttonLabel14,
 		   sheetbackColor:sheetbackColor,
+		   visible16:visible16
 
         }
       },
